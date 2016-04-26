@@ -1,0 +1,52 @@
+#bodybg{
+    background: #dfdfdf;
+    font-family: arial;
+}
+#wrapper {
+    margin-top: 38px;
+    margin-left: 187px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+#profile {
+    float: left;
+    width: 646px;
+    background: #fff
+}
+.profilebg{
+    background: #fff
+}#profile .intro{
+    overflow: hidden;
+    position: relative;
+}
+#profile .avatar{ 
+    float: left;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 20px 0;
+}
+#profile .nameintro{
+    float: left;
+    padding: 20px 70px 20px 20px;
+}
+#name{
+    font-size: 26px;
+    margin: 0;
+}
+#headline{
+    margin: 0;
+    color: #777777;
+}
+#region{
+    margin: 0;
+    color: #777777;
+}
+#Truong{
+    font-size: 14px;
+    color: #777777;
+}
+#sdt{
+    font-size: 14px;
+    color: #777777;
+}
