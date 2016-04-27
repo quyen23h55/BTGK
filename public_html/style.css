@@ -63,3 +63,35 @@
     color: #333;
     font-size: 13px;
 }
+#experience{
+    background: #fff;
+    margin-top: 10px;
+    color: #333;
+}
+#experience .titlex{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #434649;
+    padding: 30px 35px 0;
+}
+#experience .position{
+    border-bottom: 1px solid #ddd;
+    padding: 25px 35px;
+}
+#experience .position .title{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+}
+#experience .position .subtitle{
+    font-size: 14px;
+}
+#experience .position .time{
+    font-size: 12px;
+}
+#experience .position .logo{
+    float: right;
+    width: 70px;
+}

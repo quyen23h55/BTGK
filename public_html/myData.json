@@ -11,6 +11,20 @@
        "title":"Résumé",
        "description1":"Third-year student at University of Science, one of the six esteemed members of the Vietnam National University System in Ho Chi Minh City",
        "description2":"Major: Software Engineer"
-    }
+    },
+    "experience":
+        [{
+            "logo":"img/linkedin.png",
+            "title":"CEO",
+            "subtitle":"LinkedIn",
+            "time":"April 2016"
+         },
+         {
+            "logo":"img/hcmus.png",
+            "title":"Developer",
+            "subtitle":"HCMUS",
+            "time":"August 2013 (2 years 8 months)"
+         }
+        ]
 }
 

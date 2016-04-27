@@ -44,6 +44,17 @@ and open the template in the editor.
                         </p>
                     </div>
                 </section>
+                <section id="experience">
+                    <p class="titlex">Expérience</p>
+                    <div ng-repeat="x in data.experience" class="position">
+                        <p>
+                            <img class="logo" src="{{x.logo}}">
+                        </p>
+                        <p class="title">{{x.title}}</p>
+                        <p class="subtitle">{{x.subtitle}}</p>
+                        <p class="time">{{x.time}}</p>
+                    </div>
+                </section>
             </div>
         </div>
     </body>
