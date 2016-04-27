@@ -143,7 +143,7 @@
     display: inline-block;
     border: 0;
     margin: 0 10px 5px 0;
-    padding: 10px 30px;
+    padding: 10px 20px;
     font-size: 16px;
     line-height: 17px;
     color: #333333;
@@ -152,7 +152,38 @@
     border-radius: 2px;
     text-decoration: none;
 }
+#Skills .skill:hover{
+    background: #006fa6;
+}
 #Skills .skill a{
     text-decoration: none;
     color: #333;
+}
+#Education {
+    background: #fff;
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+}
+#Education .title{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #434649;
+    padding: 30px 35px 0;
+}
+#Education .myschool{
+    border-bottom: 1px solid #ddd;
+    padding: 25px 35px;
+    font-size: 14px;
+}
+#Education .logo{
+    float: right;
+    width: 70px;
+}
+#Education .name{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
 }

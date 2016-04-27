@@ -62,6 +62,21 @@
         {
             "skill":"HTML"
         }
-     ]  
+     ],
+     "Education":
+             [
+                {
+                    "logo":"img/lequydon.png",
+                    "name":"Le Quy Don High School",
+                    "location":"Binh Phuoc, Viet Nam",
+                    "time":"2009-2013"
+                },
+                {
+                    "logo":"img/hcmus.png",
+                    "name":"University of Science",
+                    "location":"Ho Chi Minh, Viet Nam",
+                    "time":"2013-2017"
+                }
+             ]
 }
 
