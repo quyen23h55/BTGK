@@ -4,30 +4,44 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html ng-app="myApp">
     <head>
         <title>Dương Trọng Quyền | LinkedIn</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script>
+           var app = angular.module('myApp', []);
+            app.controller('customersCtrl', function($scope, $http) {
+              $http.get("myData.json").then(function (response) {
+                  $scope.data = response.data;
+              });
+            });
+        </script>
     </head>
-    <body id="bodybg">
+    <body ng-controller="customersCtrl" id="bodybg">
         <div id="wrapper">
             <div id="profile">
                 <section id="topcard" class="profilebg">
                     <div class="intro">
                         <div class="avatar">
-                            <a href="index.html">
-                                <img src="avatar.jpg" width="200" height="200">
-                            </a>
+                            <img src="{{data.profile.avatar}}" width="200" height="200">                            
                         </div>
                         <div class="nameintro">
-                            <h1 id="name">Dương Trọng Quyền</h1>
-                            <p id="headline">Sinh viên</p>
-                            <p id="region"> Hồ Chí Minh, Việt Nam</p>
-                            <p id="Truong">Trường Đại học Khoa học Tự nhiên </p>
-                            <p id="sdt">01629976697</p>
+                            <h1 id="name">{{data.profile.name}}</h1>
+                            <p id="headline">{{data.profile.headline}}</p>
+                            <p id="region">{{data.profile.region}}</p>
+                            <p id="Truong">{{data.profile.truong}}</p>
+                            <p id="sdt">{{data.profile.sdt}}</p>
                         </div>
+                    </div>
+                </section>
+                <section id="sumary">
+                    <div class="title">{{data.sumary.title}}</div>
+                    <div class="description">
+                        <p>{{data.sumary.description1}}<br><br>{{data.sumary.description2}}
+                        </p>
                     </div>
                 </section>
             </div>

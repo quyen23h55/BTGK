@@ -1,0 +1,16 @@
+{
+    "profile":{
+        "avatar":"img/avatar.jpg",
+        "name":"Dương Trọng Quyền",
+        "headline":"Sinh viên",
+        "region":"Hồ Chí Minh, Việt Nam",
+        "truong":"Trường ĐHKHTN",
+        "sdt":"01629976697"
+    },
+    "sumary":{
+       "title":"Résumé",
+       "description1":"Third-year student at University of Science, one of the six esteemed members of the Vietnam National University System in Ho Chi Minh City",
+       "description2":"Major: Software Engineer"
+    }
+}
+

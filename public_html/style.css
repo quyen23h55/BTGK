@@ -11,10 +11,9 @@
 #profile {
     float: left;
     width: 646px;
-    background: #fff
 }
-.profilebg{
-    background: #fff
+#topcard{
+    background: #fff;
 }#profile .intro{
     overflow: hidden;
     position: relative;
@@ -49,4 +48,18 @@
 #sdt{
     font-size: 14px;
     color: #777777;
+}
+#sumary{
+    background: #fff;
+    margin-top: 10px;
+}
+#sumary .title{
+    padding: 30px 35px 0;
+    color: #333;
+    font-size: 16px;
+}
+#sumary .description{
+    padding: 15px 35px 30px;
+    color: #333;
+    font-size: 13px;
 }
