@@ -65,6 +65,14 @@ and open the template in the editor.
                         <p class="language">Programming language: {{x.language}}</p>
                     </div>
                 </section>
+                <section id="Skills">
+                    <p class="title">Skills</p>
+                    <div class="myskill">
+                    <div ng-repeat="x in data.skills" class="skill">
+                        <a href="" title="">{{x.skill}}</a>
+                    </div>
+                    </div>
+                </section>
             </div>
         </div>
     </body>

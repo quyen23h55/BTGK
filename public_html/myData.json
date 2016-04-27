@@ -48,6 +48,20 @@
                     "title":"Calculator",
                     "language":"Android"
                 }
-            ]
+            ],
+     "skills":[
+        {
+            "skill":"C#"
+        },
+        {
+            "skill":"C++"
+        },
+        {
+            "skill":"Java"
+        },
+        {
+            "skill":"HTML"
+        }
+     ]  
 }
 

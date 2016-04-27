@@ -122,3 +122,37 @@
     line-height: 18px;
     color: #000;
 }
+#Skills{
+    background: #fff;
+    margin-top: 10px;
+    color: #333;
+}
+#Skills .title{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #434649;
+    padding: 30px 35px 0;
+}
+#Skills .myskill{
+    padding: 30px 35px;
+}
+#Skills .skill{
+    box-shadow: 0 1px 1px #ccc;
+    transition: all 0.07s;
+    display: inline-block;
+    border: 0;
+    margin: 0 10px 5px 0;
+    padding: 10px 30px;
+    font-size: 16px;
+    line-height: 17px;
+    color: #333333;
+    font-weight: normal;
+    background: #f1f1f1;
+    border-radius: 2px;
+    text-decoration: none;
+}
+#Skills .skill a{
+    text-decoration: none;
+    color: #333;
+}
