@@ -36,18 +36,33 @@
 #headline{
     margin: 0;
     color: #777777;
+    font-size: 16px;
 }
 #region{
     margin: 0;
     color: #777777;
+    font-size: 13px;
 }
 #Truong{
     font-size: 14px;
     color: #777777;
 }
-#sdt{
-    font-size: 14px;
-    color: #777777;
+#info{
+    padding-top: 20px;
+    text-align: left;
+}
+#info th{
+    font-size: 11px;
+    color: #999;
+    padding-right: 20px;
+    white-space: nowrap;
+    padding-top: 6px;
+}
+#info td{
+    font-size: 12px;
+    line-height: 14px;
+    color: #333;
+    font-weight: normal;
 }
 #sumary{
     background: #fff;

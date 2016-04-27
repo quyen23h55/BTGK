@@ -2,10 +2,11 @@
     "profile":{
         "avatar":"img/avatar.jpg",
         "name":"Dương Trọng Quyền",
-        "headline":"Sinh viên",
-        "region":"Hồ Chí Minh, Việt Nam",
-        "truong":"Trường ĐHKHTN",
-        "sdt":"01629976697"
+        "headline":"Student at University of Science",
+        "region":"Ho Chi Minh, Viet Nam",
+        "facebook":"facebook.com/duongtrongquyen0212",
+        "gmail":"dtquyen0212@gmail.com",
+        "phone":"(+84)-1629976697"
     },
     "sumary":{
        "title":"Résumé",

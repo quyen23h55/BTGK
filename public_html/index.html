@@ -31,10 +31,25 @@ and open the template in the editor.
                         <div class="nameintro">
                             <h1 id="name">{{data.profile.name}}</h1>
                             <p id="headline">{{data.profile.headline}}</p>
-                            <p id="region">{{data.profile.region}}</p>
-                            <p id="Truong">{{data.profile.truong}}</p>
-                            <p id="sdt">{{data.profile.sdt}}</p>
+                            <p id="region">{{data.profile.region}}</p> 
+                            <div id="info">
+                                <table>
+                                    <tr>
+                                        <th>Facebook</th>
+                                        <td>{{data.profile.facebook}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Gmail</th>
+                                        <td>{{data.profile.gmail}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Phone number</th>
+                                        <td>{{data.profile.phone}}</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
+                        
                     </div>
                 </section>
                 <section id="sumary">
