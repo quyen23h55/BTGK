@@ -25,6 +25,29 @@
             "subtitle":"HCMUS",
             "time":"August 2013 (2 years 8 months)"
          }
-        ]
+        ],
+    "project":
+            [
+                {
+                    "logo":"img/dictionary.jpg",
+                    "title":"Dictionary",
+                    "language":"Java"
+                },
+                {
+                    "logo":"img/caro.png",
+                    "title":"Caro Online",
+                    "language":"WPF"
+                },
+                {
+                    "logo":"img/mypaint.png",
+                    "title":"My Paint",
+                    "language":"WPF"
+                },
+                {
+                    "logo":"img/calculator.png",
+                    "title":"Calculator",
+                    "language":"Android"
+                }
+            ]
 }
 

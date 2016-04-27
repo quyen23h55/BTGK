@@ -55,6 +55,16 @@ and open the template in the editor.
                         <p class="time">{{x.time}}</p>
                     </div>
                 </section>
+                <section id="project">
+                    <p class="titleproject">Project</p>
+                    <div ng-repeat="x in data.project" class="myproject">
+                        <p>
+                            <img class="logo" src="{{x.logo}}">
+                        </p>
+                        <p class="title">{{x.title}}</p>
+                        <p class="language">Programming language: {{x.language}}</p>
+                    </div>
+                </section>
             </div>
         </div>
     </body>

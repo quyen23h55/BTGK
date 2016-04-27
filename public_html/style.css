@@ -95,3 +95,30 @@
     float: right;
     width: 70px;
 }
+#project {
+    background: #fff;
+    margin-top: 10px;
+    color: #333;
+}
+#project .titleproject{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #434649;
+    padding: 30px 35px 0;
+}
+#project .myproject{
+    border-bottom: 1px solid #ddd;
+    padding: 25px 35px;
+    font-size: 14px;
+}
+#project .logo{
+    float: right;
+    width: 70px;
+}
+#project .title{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+}
