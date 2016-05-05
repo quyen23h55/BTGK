@@ -11,14 +11,11 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-        <script>
-           var app = angular.module('myApp', []);
-            app.controller('customersCtrl', function($scope, $http) {
-              $http.get("myData.json").then(function (response) {
-                  $scope.data = response.data;
-              });
-            });
-        </script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="javascript.js"></script>
+        
     </head>
     <body ng-controller="customersCtrl" id="bodybg">
         <div id="wrapper">
@@ -29,22 +26,59 @@ and open the template in the editor.
                             <img src="{{data.profile.avatar}}" width="200" height="200">                            
                         </div>
                         <div class="nameintro">
-                            <h1 id="name">{{data.profile.name}}</h1>
-                            <p id="headline">{{data.profile.headline}}</p>
-                            <p id="region">{{data.profile.region}}</p> 
+                            <h1 id="name" ng-show="show">{{data.profile.name}}<button id="edit" ng-click="display = true;show = false">Edit</button></h1>
+                            <form ng-show="display">
+                                <input type="text" ng-model="name"/>
+                                <button ng-click="save()">save</button>
+                                <button ng-click="cancel()">cancel</button>
+                            </form>
+                            <p id="headline" ng-show="show_headline">{{data.profile.headline}}<button id="edit" ng-click="display_headline = true;show_headline = false">Edit</button></p>
+                             <form ng-show="display_headline">
+                                <input type="text" ng-model="headline"/>
+                                <button ng-click="saveheadline()">save</button>
+                                <button ng-click="cancelheadline()">cancel</button>
+                            </form>
+                            <p id="region" ng-show="show_region">{{data.profile.region}}<button id="edit" ng-click="display_region = true;show_region = false">Edit</button></p> 
+                            <form ng-show="display_region">
+                                <input type="text" ng-model="region"/>
+                                <button ng-click="saveregion()">save</button>
+                                <button ng-click="cancelregion()">cancel</button>
+                            </form>
                             <div id="info">
                                 <table>
                                     <tr>
                                         <th>Facebook</th>
-                                        <td>{{data.profile.facebook}}</td>
+                                        <td ng-show="show_fb">{{data.profile.facebook}}<button id="edit" ng-click="display_fb = true;show_fb = false">Edit</button></td>
+                                        <td>
+                                            <form ng-show="display_fb">
+                                        <input type="text" ng-model="fb"/>
+                                        <button ng-click="savefb()">save</button>
+                                        <button ng-click="cancelfb()">cancel</button>
+                                        </form>
+                                        </td>
+                                   
                                     </tr>
                                     <tr>
                                         <th>Gmail</th>
-                                        <td>{{data.profile.gmail}}</td>
+                                        <td ng-show="show_gmail">{{data.profile.gmail}}<button id="edit" ng-click="display_gmail = true;show_gmail = false">Edit</button></td>
+                                        <td>
+                                            <form ng-show="display_gmail">
+                                        <input type="text" ng-model="gmail"/>
+                                        <button ng-click="savegmail()">save</button>
+                                        <button ng-click="cancelgmail()">cancel</button>
+                                        </form>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th>Phone number</th>
-                                        <td>{{data.profile.phone}}</td>
+                                        <td ng-show="show_phone">{{data.profile.phone}}<button id="edit" ng-click="display_phone = true;show_phone = false">Edit</button></td>
+                                        <td>
+                                            <form ng-show="display_phone">
+                                        <input type="text" ng-model="phone"/>
+                                        <button ng-click="savephone()">save</button>
+                                        <button ng-click="cancelphone()">cancel</button>
+                                        </form>
+                                        </td>
                                     </tr>
                                 </table>
                             </div>
@@ -55,7 +89,11 @@ and open the template in the editor.
                 <section id="sumary">
                     <div class="title">{{data.sumary.title}}</div>
                     <div class="description">
-                        <p>{{data.sumary.description1}}<br><br>{{data.sumary.description2}}
+                        <p>{{data.sumary.description1}}<br><button ng-click="display = true">test</button>
+                            <form ng-show="display">
+                                <input type="text" ng-model="name"/>
+                                <button ng-click="save()">save</button>
+                            </form><br>{{data.sumary.description2}}
                         </p>
                     </div>
                 </section>
@@ -99,7 +137,8 @@ and open the template in the editor.
                         <p>{{x.time}}</p>
                     </div>
                 </section>
+                <button onclick="myFunction()">dfsa</button>
             </div>
-        </div>
+        </div>       
     </body>
 </html>
