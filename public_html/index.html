@@ -80,6 +80,23 @@ and open the template in the editor.
                                         </form>
                                         </td>
                                     </tr>
+                                    <tr ng-repeat="x in data.profileplush">
+                                        <th>{{x.title}}</th>
+                                        <td>{{x.content}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td ng-show="show_plush"><button id="edit" ng-click="display_plush = true;show_plush = false;show_title=true;">Add</button></td>
+                                        <th><form ng-show="display_plush">
+                                            <input id="informaiton" type="text" ng-model="title"/>
+                                            </form></th>
+                                        <td>
+                                            <form ng-show="display_plush">
+                                            <input type="text" ng-model="content"/>
+                                            <button ng-click="saveplush()">save</button>
+                                            <button ng-click="cancelplush()">cancel</button>
+                                            </form>
+                                        </td>
+                                    </tr>
                                 </table>
                             </div>
                         </div>
@@ -89,11 +106,14 @@ and open the template in the editor.
                 <section id="sumary">
                     <div class="title">{{data.sumary.title}}</div>
                     <div class="description">
-                        <p>{{data.sumary.description1}}<br><button ng-click="display = true">test</button>
-                            <form ng-show="display">
-                                <input type="text" ng-model="name"/>
-                                <button ng-click="save()">save</button>
-                            </form><br>{{data.sumary.description2}}
+                        <p ng-show="show_description1">{{data.sumary.description1}}<button ng-click="display_description1 = true;show_description1 = false">Edit</button></p>
+                            <form ng-show="display_description1">
+                                <textarea rows="4" cols="70" ng-model="description1"></textarea>
+                                <button ng-click="savedescription1()">save</button>
+                                <button ng-click="canceldescription1()">cancel</button>
+                            </form>
+                        <p>
+                            <br><br>{{data.sumary.description2}}
                         </p>
                     </div>
                 </section>

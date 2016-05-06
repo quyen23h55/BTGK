@@ -9,6 +9,9 @@ var app = angular.module('myApp', []);
                   $scope.fb = $scope.data.profile.facebook;
                   $scope.gmail = $scope.data.profile.gmail;
                   $scope.phone = $scope.data.profile.phone;
+                  $scope.description1 = $scope.data.sumary.description1;
+                  $scope.title = "";
+                  $scope.content = "";
                   
                   $scope.display = false;
                   $scope.show = true;
@@ -22,6 +25,11 @@ var app = angular.module('myApp', []);
                   $scope.show_gmail = true;
                   $scope.display_phone = false;
                   $scope.show_phone = true;
+                  $scope.display_description1 = false;
+                  $scope.show_description1 = true;
+                  $scope.display_plush = false;
+                  $scope.show_plush = true;
+                  $scope.show_title = false;
               });
               $scope.save = function(){
                   $scope.data.profile.name = $scope.name;
@@ -85,5 +93,29 @@ var app = angular.module('myApp', []);
                   $scope.display_phone = false;
                   $scope.show_phone = true;
             }
-    
+            $scope.savedescription1 = function(){
+                  $scope.data.sumary.description1 = $scope.description1;
+                  $scope.display_description1 = false;
+                  $scope.show_description1 = true;
+}
+            $scope.canceldescription1 = function(){
+                  $scope.description1 = $scope.data.sumary.description1;
+                  $scope.display_description1 = false;
+                  $scope.show_description1 = true;                 
+            }
+            $scope.saveplush= function(){
+                  $scope.data.profileplush.push({title:$scope.title,content:$scope.content});
+                  $scope.display_plush = false;
+                  $scope.show_plush = true;
+                  $scope.title = "";
+                  $scope.content = "";
+                  $scope.show_title = false;
+            }  
+            $scope.cancelplush = function(){
+                  $scope.display_plush = false;
+                  $scope.show_plush = true;
+                  $scope.title = "";
+                  $scope.content = "";  
+                  $scope.show_title = false;
+            }
             });
