@@ -16,6 +16,9 @@ var app = angular.module('myApp', []);
                   $scope.exptitle = "";
                   $scope.expsubtitle = "";
                   $scope.exptime = "";
+                  $scope.protitle = "";
+                  $scope.prologo = "";
+                  $scope.prolanguage = "";
                   
                   $scope.display = false;
                   $scope.show = true;
@@ -40,6 +43,7 @@ var app = angular.module('myApp', []);
                   $scope.display_resume = false;
                   $scope.display_experience = false;
                   $scope.display_addexperience = false;
+                  $scope.display_project = false;
               });
               $scope.save = function(){
                   $scope.data.profile.name = $scope.name;
@@ -168,11 +172,51 @@ var app = angular.module('myApp', []);
                 $scope.exptime = "";
             }
             $scope.saveaddexperience = function(){
-                $scope.data.experience.push({logo:$scope.explogo,title:$scope.exptitle,subtitle:$scope.exptime});
+                $scope.data.experience.push({logo:$scope.explogo,title:$scope.exptitle,subtitle:$scope.expsubtitle,time:$scope.exptime});
                 $scope.display_addexperience = false;
                 $scope.explogo = "";
                 $scope.exptitle = "";
                 $scope.expsubtitle = "";
                 $scope.exptime = "";
             }
+            $scope.canceladdexperience = function(){
+                $scope.display_addexperience = false;
+                $scope.explogo = "";
+                $scope.exptitle = "";
+                $scope.expsubtitle = "";
+                $scope.exptime = "";
+            }
+            $scope.clickproject = function(index){
+                $scope.display_project = true;
+                $scope.prologo = $scope.data.project[index].logo;
+                $scope.protitle = $scope.data.project[index].title;
+                $scope.prolanguage = $scope.data.project[index].language;
+                $scope.ipro = index;
+            }
+            $scope.saveproject = function(index){
+                $scope.display_project = false;
+                $scope.data.project[index].logo = $scope.prologo;
+                $scope.data.project[index].title = $scope.protitle;
+                $scope.data.project[index].language = $scope.prolanguage;
+            }
+            $scope.cancelproject = function(){
+                $scope.display_project = false;
+                $scope.prologo = "";
+                $scope.protitle = "";
+                $scope.prolanguage = "";
+            }
+            $scope.saveaddproject = function(){
+                $scope.data.project.push({logo:$scope.prologo,title:$scope.protitle,language:$scope.prolanguage});
+                $scope.display_addproject = false;
+                $scope.prologo = "";
+                $scope.protitle = "";
+                $scope.prolanguage= "";
+            }
+            $scope.canceladdproject = function(){
+                $scope.display_addproject = false;
+                $scope.prologo = "";
+                $scope.protitle = "";
+                $scope.prolanguage = "";
+            }
+
             });

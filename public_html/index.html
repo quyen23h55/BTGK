@@ -151,14 +151,31 @@ and open the template in the editor.
                        </form>
                 </section>
                 <section id="project">
-                    <p class="titleproject">Project</p>
+                    <p class="titleproject">Project<button id="edit" ng-click="display_addproject = true">Add</button></p>
                     <div ng-repeat="x in data.project" class="myproject">
                         <p>
                             <img class="logo" src="{{x.logo}}">
                         </p>
-                        <p class="title">{{x.title}}</p>
+                        <p class="title">{{x.title}}<button id="edit" ng-click="clickproject($index)">Edit</button></p>
                         <p class="language">Programming language: {{x.language}}</p>
                     </div>
+                    <form class="myproject" ng-show="display_project">
+                            <input type="text" ng-model="prologo"/>
+                            <input type="text" ng-model="protitle"/>
+                            <input type="text" ng-model="prolanguage"/>
+                            <button ng-click="saveproject(ipro)">save</button>
+                            <button ng-click="cancelproject()">cancel</button>
+                       </form>
+                    <form class="myproject" ng-show="display_addproject">
+                            <p>logo</p>
+                            <input type="text" ng-model="prologo"/>
+                            <p>project name</p>
+                            <input type="text" ng-model="protitle"/>
+                            <p>language</p>
+                            <input type="text" ng-model="prolanguage"/>
+                               <button ng-click="saveaddproject()">add</button>
+                               <button ng-click="canceladdproject()">cancel</button>
+                       </form>
                 </section>
                 <section id="Skills">
                     <p class="title">Skills</p>
