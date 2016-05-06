@@ -195,6 +195,14 @@
     color: #434649;
     padding: 30px 35px 0;
 }
+#Education .titlee{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #434649;
+    padding: 30px 35px 0;
+    padding-bottom: 20px;
+}
 #Education .myschool{
     border-bottom: 1px solid #ddd;
     padding: 25px 35px;

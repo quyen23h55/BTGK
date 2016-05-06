@@ -197,17 +197,40 @@ and open the template in the editor.
                        </form>
                 </section>
                 <section id="Education">
-                    <div class="title">Education</div>
+                    <div class="title">Education<button id="edit" ng-click="display_addEducation = true">Add</button></div>
                     <div ng-repeat="x in data.Education" class="myschool">
                         <p>
                             <img class="logo" src="{{x.logo}}">                            
                         </p>
-                        <p class="name">{{x.name}}</p>
+                        <p class="name">{{x.name}}<button id="edit" ng-click="clickEducation($index)">Edit</button></p>
                         <p>{{x.location}}</p>
                         <p>{{x.time}}</p>
                     </div>
+                    <form class="titlee" ng-show="display_Education">
+                        <p>logo</p>
+                        <input type="text" ng-model="edulogo"/>
+                        <p>name</p>
+                        <input type="text" ng-model="eduname"/>
+                        <p>location</p>
+                        <input type="text" ng-model="edulocation"/>
+                        <p>time</p>
+                        <input type="text" ng-model="edutime"/>
+                        <button ng-click="saveEducation(iedu)">save</button>
+                        <button ng-click="cancelEducation()">cancel</button>
+                       </form>
+                    <form class="titlee" ng-show="display_addEducation">
+                        <p>logo</p>
+                        <input type="text" ng-model="edulogo"/>
+                        <p>name</p>
+                        <input type="text" ng-model="eduname"/>
+                        <p>location</p>
+                        <input type="text" ng-model="edulocation"/>
+                        <p>time</p>
+                        <input type="text" ng-model="edutime"/>
+                        <button ng-click="saveaddEducation()">Add</button>
+                        <button ng-click="canceladdEducation()">Cancel</button>
+                       </form>
                 </section>
-                <button onclick="myFunction()">dfsa</button>
             </div>
         </div>       
     </body>

@@ -20,6 +20,10 @@ var app = angular.module('myApp', []);
                   $scope.prologo = "";
                   $scope.prolanguage = "";
                   $scope.skill = "";
+                  $scope.edulogo = "";
+                  $scope.eduname = "";
+                  $scope.edulocation = "";
+                  $scope.edutime = "";
                   
                   $scope.display = false;
                   $scope.show = true;
@@ -46,6 +50,7 @@ var app = angular.module('myApp', []);
                   $scope.display_addexperience = false;
                   $scope.display_project = false;
                   $scope.display_skill = false;
+                  $scope.display_Education = false;
               });
               $scope.save = function(){
                   $scope.data.profile.name = $scope.name;
@@ -241,5 +246,42 @@ var app = angular.module('myApp', []);
             $scope.canceladdskill = function(){
                 $scope.display_addskill = false;
                 $scope.skill = "";
+            }
+            $scope.clickEducation = function(index){
+                $scope.display_Education = true;
+                $scope.edulogo = "";
+                 $scope.eduname = "";
+                 $scope.edulocation = "";
+                 $scope.edutime = "";
+                $scope.iedu = index;
+            }
+            $scope.saveEducation = function(index){
+                $scope.display_Education = false;
+                $scope.data.Education[index].logo = $scope.edulogo;
+                $scope.data.Education[index].name = $scope.eduname;
+                $scope.data.Education[index].location = $scope.edulocation;
+                $scope.data.Education[index].time = $scope.edutime;               
+            }
+            $scope.cancelEducation = function(){
+                $scope.display_Education = false;
+                $scope.edulogo = "";
+                  $scope.eduname = "";
+                  $scope.edulocation = "";
+                  $scope.edutime = "";
+            }
+            $scope.saveaddEducation = function(){
+                $scope.display_addEducation = false;
+                $scope.data.Education.push({logo:$scope.edulogo,name:$scope.eduname,location:$scope.edulocation,time:$scope.edutime});
+               $scope.edulogo = "";
+                  $scope.eduname = "";
+                  $scope.edulocation = "";
+                  $scope.edutime = "";
+            }
+            $scope.canceladdEducation = function(){
+                $scope.display_addEducation = false;
+                $scope.edulogo = "";
+                  $scope.eduname = "";
+                  $scope.edulocation = "";
+                  $scope.edutime = "";
             }
             });
