@@ -178,18 +178,29 @@ and open the template in the editor.
                        </form>
                 </section>
                 <section id="Skills">
-                    <p class="title">Skills</p>
-                    <div class="myskill">
-                        <div ng-repeat="x in data.skills" class="skill">
-                            <a href="" title="">{{x.skill}}</a>
+                    <p class="title">Skills<button id="edit" ng-click="display_addskill = true">Add</button></p>
+                    <div class="myskill" ng-repeat="x in data.skills">
+                        <div class="skill">
+                            <a href="" title="">{{x.skill}}</a>                             
                         </div>
+                        <button id="edit" ng-click="clickskill($index)">Edit</button>
                     </div>
+                    <form class="titlee" ng-show="display_skill">
+                            <input type="text" ng-model="skill"/>
+                            <button ng-click="saveskill(isk)">save</button>
+                            <button ng-click="cancelskill()">cancel</button>
+                       </form>
+                     <form class="titlee" ng-show="display_addskill">
+                            <input type="text" ng-model="skill"/>
+                               <button ng-click="saveaddskill()">add</button>
+                               <button ng-click="canceladdskill()">cancel</button>
+                       </form>
                 </section>
                 <section id="Education">
                     <div class="title">Education</div>
                     <div ng-repeat="x in data.Education" class="myschool">
                         <p>
-                            <img class="logo" src="{{x.logo}}">
+                            <img class="logo" src="{{x.logo}}">                            
                         </p>
                         <p class="name">{{x.name}}</p>
                         <p>{{x.location}}</p>

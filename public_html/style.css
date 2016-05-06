@@ -149,8 +149,15 @@
     color: #434649;
     padding: 30px 35px 0;
 }
+#Skills .titlee{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #434649;
+    padding: 0px 35px 10px;
+}
 #Skills .myskill{
-    padding: 30px 35px;
+    padding: 10px 35px;
 }
 #Skills .skill{
     box-shadow: 0 1px 1px #ccc;

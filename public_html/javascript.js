@@ -19,6 +19,7 @@ var app = angular.module('myApp', []);
                   $scope.protitle = "";
                   $scope.prologo = "";
                   $scope.prolanguage = "";
+                  $scope.skill = "";
                   
                   $scope.display = false;
                   $scope.show = true;
@@ -44,6 +45,7 @@ var app = angular.module('myApp', []);
                   $scope.display_experience = false;
                   $scope.display_addexperience = false;
                   $scope.display_project = false;
+                  $scope.display_skill = false;
               });
               $scope.save = function(){
                   $scope.data.profile.name = $scope.name;
@@ -218,5 +220,26 @@ var app = angular.module('myApp', []);
                 $scope.protitle = "";
                 $scope.prolanguage = "";
             }
-
+            $scope.clickskill = function(index){
+                $scope.display_skill = true;
+                $scope.skill = $scope.data.skills[index].skill;
+                $scope.isk = index;
+            }
+            $scope.saveskill = function(index){
+                $scope.display_skill = false;
+                $scope.data.skills[index].skill = $scope.skill;
+            }
+            $scope.cancelskill = function(){
+                $scope.display_skill = false;
+                $scope.skill = "";
+            }
+            $scope.saveaddskill = function(){
+                $scope.display_addskill = false;
+                $scope.data.skills.push({skill:$scope.skill});
+                $scope.skill = "";
+            }
+            $scope.canceladdskill = function(){
+                $scope.display_addskill = false;
+                $scope.skill = "";
+            }
             });
