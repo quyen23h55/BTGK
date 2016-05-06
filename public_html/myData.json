@@ -13,11 +13,14 @@
                   "title":"",
                   "content":""
             }],
-    "sumary":{
-       "title":"Résumé",
-       "description1":"Third-year student at University of Science, one of the six esteemed members of the Vietnam National University System in Ho Chi Minh City",
-       "description2":"Major: Software Engineer"
-    },
+    "sumary":[
+        {
+            "description":"Third-year student at University of Science, one of the six esteemed members of the Vietnam National University System in Ho Chi Minh City"
+        },
+        {
+            "description":"Major: Software Engineer"
+        }
+    ],
     "experience":
         [{
             "logo":"img/linkedin.png",

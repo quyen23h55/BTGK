@@ -205,7 +205,11 @@
 }
 #edit{
     color: black;
+    font-weight: normal;
 }
 #informaiton{
     width: 70px;
+}
+#experience .titlex p{
+    color:  #000;
 }

@@ -104,29 +104,51 @@ and open the template in the editor.
                     </div>
                 </section>
                 <section id="sumary">
-                    <div class="title">{{data.sumary.title}}</div>
-                    <div class="description">
-                        <p ng-show="show_description1">{{data.sumary.description1}}<button ng-click="display_description1 = true;show_description1 = false">Edit</button></p>
-                            <form ng-show="display_description1">
-                                <textarea rows="4" cols="70" ng-model="description1"></textarea>
-                                <button ng-click="savedescription1()">save</button>
-                                <button ng-click="canceldescription1()">cancel</button>
-                            </form>
-                        <p>
-                            <br><br>{{data.sumary.description2}}
-                        </p>
+                    <div class="title">Résumé <button id="edit" ng-click="display_addresume = true">Add</button></div>
+                    <div class="description" ng-repeat="x in data.sumary">
+                        <p>{{x.description}}<button ng-click="clicksummary($index)">Edit</button><br></p>                                  
                     </div>
+                      <form class="description" ng-show="display_description">
+                               <textarea rows="4" cols="70" ng-model="test"></textarea>
+                               <button ng-click="savedescription(i)">save</button>
+                               <button ng-click="canceldescription()">cancel</button>
+                       </form>  
+                        <form class="description" ng-show="display_addresume">
+                               <textarea rows="4" cols="70" ng-model="addresume"></textarea>
+                               <button ng-click="saveaddresume()">add</button>
+                               <button ng-click="canceladdresume()">cancel</button>
+                       </form>  
                 </section>
                 <section id="experience">
-                    <p class="titlex">Expérience</p>
+                    <p class="titlex">Expérience<button id="edit" ng-click="display_addexperience = true">Add</button></p>
                     <div ng-repeat="x in data.experience" class="position">
                         <p>
                             <img class="logo" src="{{x.logo}}">
                         </p>
-                        <p class="title">{{x.title}}</p>
+                        <p class="title">{{x.title}}<button id="edit" ng-click="clickexperience($index)">Edit</button></p>
                         <p class="subtitle">{{x.subtitle}}</p>
                         <p class="time">{{x.time}}</p>
                     </div>
+                        <form class="titlex" ng-show="display_experience">
+                            <input type="text" ng-model="explogo"/>
+                            <input type="text" ng-model="exptitle"/>
+                            <input type="text" ng-model="expsubtitle"/>
+                            <input type="text" ng-model="exptime"/>
+                            <button ng-click="saveexperience(iexp)">save</button>
+                            <button ng-click="cancelexperience()">cancel</button>
+                       </form>
+                     <form class="titlex" ng-show="display_addexperience">
+                            <p>logo</p>
+                            <input type="text" ng-model="explogo"/>
+                            <p>Job</p>
+                            <input type="text" ng-model="exptitle"/>
+                            <p>Location</p>
+                            <input type="text" ng-model="expsubtitle"/>
+                            <p>Time</p>
+                            <input type="text" ng-model="exptime"/>
+                               <button ng-click="saveaddexperience()">add</button>
+                               <button ng-click="canceladdexperience()">cancel</button>
+                       </form>
                 </section>
                 <section id="project">
                     <p class="titleproject">Project</p>
