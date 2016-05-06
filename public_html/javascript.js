@@ -249,10 +249,10 @@ var app = angular.module('myApp', []);
             }
             $scope.clickEducation = function(index){
                 $scope.display_Education = true;
-                $scope.edulogo = "";
-                 $scope.eduname = "";
-                 $scope.edulocation = "";
-                 $scope.edutime = "";
+                $scope.edulogo =  $scope.data.Education[index].logo;
+                 $scope.eduname = $scope.data.Education[index].name;
+                 $scope.edulocation = $scope.data.Education[index].location;
+                 $scope.edutime = $scope.data.Education[index].time;
                 $scope.iedu = index;
             }
             $scope.saveEducation = function(index){
